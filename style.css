@@ -3,6 +3,11 @@
     --text: #33322f;
     --link: #fcedae;
     --visited: #b3ac89;
+    --shadow: #ada69c;
+    --link-light-surface: #b4995e;
+    --visited-light-surface: #7c683b;
+
+    font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -31,6 +36,7 @@ figure {
     height: max(100vh, 600px);
     width: min(calc(max(100vh, 600px) * 2/3 ), 50vw);
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 #logo {
@@ -55,6 +61,7 @@ figure {
 #logo img {
     height: max(90%, 36px);
     width: auto;
+    color: var(--surface);
 }
 
 @media (max-width: 763px) {
@@ -94,12 +101,13 @@ figcaption a:visited {
 
 main {
     background-color: var(--surface);
-    width: calc(100vw - calc(max(100vh, 600px) * 2/3 ));
+    flex-basis: calc(100vw - calc(max(100vh, 600px) * 2/3 ));
+    flex-grow: 1;
     height: max(100vh, 600px);
 
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: left;
     padding: 5rem;
 }
@@ -110,4 +118,87 @@ main {
 
 .pad_bottom {
     padding-bottom: 2rem;
+}
+
+form {
+    margin-left: -5rem;
+    margin-right: -5rem;
+    margin-top: 2rem;
+    padding: 0 5rem;
+    box-shadow: 0 3px 5px var(--shadow);
+}
+
+form h3 {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.form_main {
+    border: none;
+    padding: 1rem 0;
+}
+
+.form_main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+label {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-text {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid var(--text);
+    background-color: var(--surface);
+    border-radius: 4px;
+}
+
+form button {
+    padding: 1rem 4rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--text);
+    background-color: var(--text);
+    color: var(--surface)
+}
+
+form button:hover {
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+form button:active {
+    filter: brightness(0.8);
+}
+
+.form_submits {
+    margin: 1rem 0 1.5rem 0;
+    
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.form_submits span {
+    margin-bottom: 0.5rem;
+}
+
+.form_submits a:link {
+    color: var(--link-light-surface);
+}
+
+.form_submits a:visited {
+    color: var(--visited-lightlink-surface);
 }

@@ -20,6 +20,39 @@
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda adipisci similique sunt enim expedita aspernatur obcaecati porro, modi, libero ipsa, ea nulla illo nemo blanditiis voluptatibus ipsum optio vel quidem!
         </p>
+        <form action="index.html" method="post">
+            <h3>Let's do this!</h3>
+            <fieldset class="form_main">
+                <label>
+                    <span class="label-text">*First Name</span>
+                    <input type="text" name="name" placeholder="John" required>
+                </label>
+                <label>
+                    <span class="label-text">*Last Name</span>
+                    <input type="text" name="surname" placeholder="Smith" required>
+                </label>
+                <label>
+                    <span class="label-text">*Email</span>
+                    <input type="email" name="email" placeholder="john.smith@gmail.com" required>
+                </label>
+                <label>
+                    <span class="label-text">Tel</span>
+                    <input type="tel" name="tel" placeholder="(+000) 111 222 333">
+                </label>
+                <label>
+                    <span class="label-text">*Password</span>
+                    <input type="password" name="password" required>
+                </label>
+                <label>
+                    <span class="label-text">*Confirm Password</span>
+                    <input type="password" name="confirm_password" required>
+                </label>
+            </fieldset> 
+            <div class="form_submits">
+                <button type="submit">Create Account</button>
+                <span>Already got an account? <a href="index.html">Log in</a></span> 
+            </div>       
+        </form>
     </main>
 </body>
 </html>
