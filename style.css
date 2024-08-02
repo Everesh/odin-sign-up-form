@@ -11,10 +11,15 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: "Odin";
+    src: local("Odin"), 
+         url("fonts/Norse-Bold.otf") format("opentype");
+}
+
 body {
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
 
     background-color: var(--surface);
 
@@ -27,6 +32,41 @@ figure {
     overflow: hidden;
 }
 
+#logo {
+    position: absolute;
+    width: min(calc(max(100vh, 600px) * 2/3 ), 50vw);
+    left: 0;
+    top: max(30vh, 200px);
+    height: max(20%, 40px);
+
+    font-family: "Odin", Arial, Helvetica, sans-serif;
+    font-size: min(10rem, 20vh);
+    color: var(--surface);
+    background-color: rgba(0,0,0,20%);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#logo img {
+    height: max(90%, 36px);
+    width: auto;
+}
+
+@media (max-width: 763px) {
+    #logo {
+        height: max(40%, 80px);
+    }
+    
+    #logo img {
+        height: max(45%, 36px);
+        width: auto;
+    }
+}
+
 img {
     height: max(100vh, 600px);
     width: calc(max(100vh, 600px) * 2/3 );
@@ -34,7 +74,7 @@ img {
 
 figcaption {
     position: absolute;
-    bottom: 1rem;
+    top: max(95vh, 570px);
     left: 0;
     width: min(calc(max(100vh, 600px) * 2/3 ), 50vw);
     text-align: center;
