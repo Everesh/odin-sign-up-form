@@ -1,0 +1,55 @@
+:root {
+    --surface: #ddd;
+    --link: #fcedae;
+    --visited: #b3ac89;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    background-color: var(--surface);
+}
+
+figure {
+    height: max(100vh, 600px);
+    width: min(calc(max(100vh, 600px) * 2/3 ), 50vw);
+    overflow: hidden;
+}
+
+img {
+    height: max(100vh, 600px);
+    width: calc(max(100vh, 600px) * 2/3 );
+}
+
+figcaption {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    width: min(calc(max(100vh, 600px) * 2/3 ), 50vw);
+    text-align: center;
+
+    color: var(--surface);
+}
+
+figcaption a:link {
+    color: var(--link);
+}
+
+
+figcaption a:visited {
+    color: var(--visited);
+}
+
+main {
+    background-color: var(--surface);
+    width: calc(100vw - calc(max(100vh, 600px) * 2/3 ));
+    height: max(100vh, 600px);
+}
