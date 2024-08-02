@@ -21,6 +21,7 @@ body {
     height: 100vh;
     width: 100vw;
 
+    color: var(--text);
     background-color: var(--surface);
 
     display: flex;
@@ -37,10 +38,10 @@ figure {
     width: min(calc(max(100vh, 600px) * 2/3 ), 50vw);
     left: 0;
     top: max(30vh, 200px);
-    height: max(20%, 40px);
+    height: max(20%, 160px);
 
     font-family: "Odin", Arial, Helvetica, sans-serif;
-    font-size: min(10rem, 20vh);
+    font-size: 10rem;
     color: var(--surface);
     background-color: rgba(0,0,0,20%);
 
@@ -58,7 +59,7 @@ figure {
 
 @media (max-width: 763px) {
     #logo {
-        height: max(40%, 80px);
+        height: max(40%, 320px);
     }
     
     #logo img {
@@ -95,4 +96,18 @@ main {
     background-color: var(--surface);
     width: calc(100vw - calc(max(100vh, 600px) * 2/3 ));
     height: max(100vh, 600px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: left;
+    padding: 5rem;
+}
+
+.font_4rem {
+    font-size: 4rem;
+}
+
+.pad_bottom {
+    padding-bottom: 2rem;
 }
