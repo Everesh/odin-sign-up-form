@@ -1,5 +1,6 @@
 :root {
-    --surface: #ddd;
+    --surface: #f7f3e9;
+    --text: #33322f;
     --link: #fcedae;
     --visited: #b3ac89;
 }
@@ -16,6 +17,8 @@ body {
     overflow: hidden;
 
     background-color: var(--surface);
+
+    display: flex;
 }
 
 figure {
